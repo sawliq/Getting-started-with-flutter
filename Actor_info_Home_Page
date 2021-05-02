@@ -1,0 +1,119 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MaterialApp(
+    home:Demo(),
+  ));
+
+
+class Demo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black87,
+      appBar: AppBar(
+        title: Text('Actor Info',
+        style: TextStyle(
+            color: Colors.white,
+        ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+        elevation: 0.0,
+      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30, 60, 35, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:<Widget>[
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage("image/k.jpg"),
+                radius: 100.0,
+              ),
+            ),
+            SizedBox(height: 20),
+            Divider(
+              height: 40,
+              thickness: 2,
+              color: Colors.red,
+            ),
+            SizedBox(height: 10),
+            Text(
+              'Name',
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+              letterSpacing: 1.0,
+              fontWeight: FontWeight.bold,
+            ),
+            ),
+            SizedBox(height:10.0),
+            Text(
+              'Keanu Reeves',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.red,
+                letterSpacing: 1.0,
+              ),
+            ),
+            SizedBox(height: 20.0),
+            Text(
+              'Age',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+                letterSpacing: 1.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height:10.0),
+            Text(
+              '56',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.red,
+                letterSpacing: 1.0,
+              ),
+            ),
+            SizedBox(height:20.0),
+            Text(
+              'Nationality',
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.white,
+                letterSpacing: 1.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height:10.0),
+            Text(
+              'American/British',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.red,
+                letterSpacing: 1.0,
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              children:<Widget> [
+                Icon(
+                  Icons.email,
+                  color:Colors.white,
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'KeanuReeves@hotmail.com',
+                  style:TextStyle(
+                    color:Colors.red,
+                    fontSize: 20,
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
